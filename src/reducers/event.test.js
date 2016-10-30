@@ -11,12 +11,6 @@ function name(name_){
     return name_ + name_
 }
 
-it('activeCategory reducer works', () => {
-    const action_ = {type: 'CHANGE_ACTIVE_CATEGORY', category: "university"}
-    expect(activeCategoryReducer({}, action_)).toEqual("university")
-});
-
-
 const events = [
     {name: "event 1", id: "event1", reminderAdded:false },
     {name: "another event", id:"event2", reminderAdded:false}
@@ -43,4 +37,26 @@ it ("event filterer returns null for  non existant event", () => {
     expect(filterEventsById(events, nonExistId)).toEqual(null)
 })
 
+
+const action_ = {type: 'REMINDER_ADDED', id: id1}
+
+it ("event reducer works on the right reducer", () => {
+    const chosenEvent = filterEventsById(events, id1)
+    const i = events.indexOf(chosenEvent)
+    const reducedEvents = eventReducer(events, action_)
+    expect(reducedEvents[i]["reminderAdded"]).toEqual(true)
+})
+
+
+it ("event reducer does not affect other reducers", () => {
+    const chosenEvent = filterEventsById(events, id1)
+    const i = 1
+    const reducedEvents = eventReducer(events, action_)
+    expect(reducedEvents[i]["reminderAdded"]).toEqual(false)
+})
+
+it ("active category reducer works", () => {
+    const action_ = {type:'CHANGE_ACTIVE_CATEGORY', category:"python"}
+    expect(activeCategoryReducer("all", action_)).toEqual("python")
+})
 
