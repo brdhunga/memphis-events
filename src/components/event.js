@@ -4,28 +4,28 @@ import React, { Component } from 'react';
 export default class Event extends Component {
   render() {
     return (
-        <div class="columns is-mobile">
-            <div class="column is-half is-offset-one-quarter">
-                <div class="card is-fullwidth">
-                    <header class="card-header">
-                        <p class="card-header-title">
+        <div className="columns is-mobile">
+            <div className="column is-half is-offset-one-quarter">
+                <div className="card is-fullwidth">
+                    <header className="card-header">
+                        <p className="card-header-title">
                             {this.props.title}
                         </p>
-                        <a class="card-header-icon">
-                            <i class="fa fa-angle-down"></i>
+                        <a className="card-header-icon">
+                            <i className="fa fa-angle-down"></i>
                         </a>
                     </header>
-                    <div class="card-content">
-                        <div class="content">
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris. <a href="#">@bulmaio</a>. <a href="#">#css</a> <a href="#">#responsive</a>
+                    <div className="card-content">
+                        <div className="content">
+                            {this.props.content}
                             <br></br>
-                            <small>11:09 PM - 1 Jan 2016</small>
+                            <small>{this.props.from} - {this.props.to}</small>
                         </div>
                     </div>
-                    <footer class="card-footer">
-                        <a class="card-footer-item">Save</a>
-                        <a class="card-footer-item">Edit</a>
-                        <a class="card-footer-item">Delete</a>
+                    <footer className="card-footer">
+                        <a className="card-footer-item">{this.props.poster}</a>
+                        <a className="card-footer-item">Edit</a>
+                        <a className="card-footer-item">Delete</a>
                     </footer>
                 </div>
             </div>
