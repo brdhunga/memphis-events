@@ -13,4 +13,3 @@ it("Action--reminder add -- returns right action object", () => {
     expect(reminderAddTo(id)).toEqual(expectedAction)
 })
 
-
