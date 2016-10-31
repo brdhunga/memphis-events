@@ -3,6 +3,7 @@ import ReactDOM from 'react-dom';
 import App from '../App';
 import expect from 'expect';
 
+
 import activeCategoryReducer from './activeCategoryReducer'
 import { filterEventsById, eventReducer } from './eventReducer'
 

@@ -3,55 +3,55 @@ import React, { Component } from 'react';
 export default  class App extends Component {
     render() {
 
-        return <nav class="nav">
-            <div class="nav-left">
-                <a class="nav-item is-brand" href="#">
+        return <nav className="nav">
+            <div className="nav-left">
+                <a className="nav-item is-brand" href="#">
                     <img 
                     src="http://bulma.io/images/bulma-type.png" 
                     alt="Event manager" ></img>
                 </a>
             </div>
 
-            <div class="nav-center">
-                <a class="nav-item" href="#">
-                    <span class="icon">
-                        <i class="fa fa-github"></i>
+            <div className="nav-center">
+                <a className="nav-item" href="#">
+                    <span className="icon">
+                        <i className="fa fa-github"></i>
                     </span>
                 </a>
-                <a class="nav-item" href="#">
-                    <span class="icon">
-                        <i class="fa fa-twitter"></i>
+                <a className="nav-item" href="#">
+                    <span className="icon">
+                        <i className="fa fa-twitter"></i>
                     </span>
                 </a>
             </div>
 
-            <span class="nav-toggle">
+            <span className="nav-toggle">
                 <span></span>
                 <span></span>
                 <span></span>
             </span>
 
-            <div class="nav-right nav-menu">
-                <a class="nav-item" href="#">
+            <div className="nav-right nav-menu">
+                <a className="nav-item" href="#">
                     Home
             </a>
-                <a class="nav-item" href="#">
+                <a className="nav-item" href="#">
                     Documentation
             </a>
-                <a class="nav-item" href="#">
+                <a className="nav-item" href="#">
                     Blog
             </a>
 
-                <span class="nav-item">
-                    <a class="button" >
-                        <span class="icon">
-                            <i class="fa fa-twitter"></i>
+                <span className="nav-item">
+                    <a className="button" >
+                        <span className="icon">
+                            <i className="fa fa-twitter"></i>
                         </span>
                         <span>Tweet</span>
                     </a>
-                    <a class="button is-primary" href="#">
-                        <span class="icon">
-                            <i class="fa fa-download"></i>
+                    <a className="button is-primary" href="#">
+                        <span className="icon">
+                            <i className="fa fa-download"></i>
                         </span>
                         <span>Download</span>
                     </a>

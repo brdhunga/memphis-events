@@ -3,11 +3,18 @@ import logo from './logo.svg';
 import './App.css';
 
 import Nav from './components/nav'
+import Header from './components/header'
+import Tags from './components/tags'
+
 
 class App extends Component {
   render() {
     return (
-        <div><h3> Bivu </h3></div>
+        <div>
+          <Nav />
+          <Header />
+          <Tags {...this.props} />
+        </div>
     );
   }
 }

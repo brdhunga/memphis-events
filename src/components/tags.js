@@ -2,16 +2,29 @@ import React, { Component } from 'react';
 
 
 export default class Tags extends Component {
+
+  renderEmptyListIfUndefinedTags(tags){
+      console.log("the tags............")
+      console.log(tags)
+      if (tags === undefined){
+          return []
+      }
+      return tags
+  }
+
+  
   render() {
+
     return (
-        <div class="columns is-mobile">
-            <div class="column is-half is-offset-one-quarter">
-                <span class="tag is-dark">Dark</span>
-                <span class="tag is-primary">Primary</span>
-                <span class="tag is-info">Info</span>
-                <span class="tag is-success">Success</span>
-                <span class="tag is-warning">Warning</span>
-                <span class="tag is-danger">Danger</span>
+        <div className="columns is-mobile">
+            <div className="column is-half is-offset-one-quarter">
+
+                {
+                    this.renderEmptyListIfUndefinedTags(this.props.tags)             
+                    .map(function(item){
+                        return <span className="tag">{item}</span> 
+                    })
+                }
 
             </div>
         </div>
