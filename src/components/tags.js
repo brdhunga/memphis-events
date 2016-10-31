@@ -4,8 +4,6 @@ import React, { Component } from 'react';
 export default class Tags extends Component {
 
   renderEmptyListIfUndefinedTags(tags){
-      console.log("the tags............")
-      console.log(tags)
       if (tags === undefined){
           return []
       }
