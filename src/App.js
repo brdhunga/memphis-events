@@ -5,6 +5,7 @@ import './App.css';
 import Nav from './components/nav'
 import Header from './components/header'
 import Tags from './components/tags'
+import Events from './components/events'
 
 
 class App extends Component {
@@ -14,6 +15,7 @@ class App extends Component {
           <Nav />
           <Header />
           <Tags {...this.props} />
+          <Events {...this.props} />
         </div>
     );
   }

@@ -20,7 +20,7 @@ export default class Events extends Component {
                 {
                     this.renderEmptyListIfUndefinedEvents(this.props.events)             
                     .map(function(event){
-                        return <Event {...event} /> 
+                        return <Event key={event['id']} {...event} /> 
                     })
                 }
             </div>

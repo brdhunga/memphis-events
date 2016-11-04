@@ -40,7 +40,7 @@ describe('[Events Component]', function () {
     const events = [event1, event2]
 
     const props = {
-        events: events
+        events
     }
     
     // setup
